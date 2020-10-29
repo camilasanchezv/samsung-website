@@ -1,4 +1,55 @@
-.text{
-    font-size: 30px;
-    color: blueviolet;
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+body{
+    font-family: "Mukta";
 }
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+.logo{
+    height: 24px;
+}
+.links-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.links-container .link{
+    font-size: 14px;
+    padding: 4px 12px;
+    color: black;
+    font-weight: bold;
+    border-radius: 24px;
+    transition: 0.15s ease-out;
+}
+.links-container .link:hover {
+    background-color: black;
+    color: white;
+}
+.links-container i{
+    padding: 0 12px;
+}
+@media (min-width:0px)  { 
+    .header.mobile{
+        display: flex;
+        padding: 16px 5%;
+    }
+    .header.fullwidth{
+        display: none;
+    }
+    
+ }
+@media (min-width:1290px)  { 
+    .header.mobile{
+        display: none;
+    }
+    .header.fullwidth{
+        display: flex;
+    }
+ }
