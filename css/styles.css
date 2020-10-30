@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
 body{
     font-family: "Mukta";
 }
@@ -8,7 +9,6 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5%;
 }
 .logo{
     height: 24px;
@@ -22,7 +22,7 @@ body{
 }
 .links-container .link{
     font-size: 14px;
-    padding: 4px 12px;
+    padding: 4px 10px;
     color: black;
     font-weight: bold;
     border-radius: 24px;
@@ -35,6 +35,36 @@ body{
 .links-container i{
     padding: 0 12px;
 }
+.container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 1.5vw;
+    padding: 15px 0;
+}
+.offers-container{
+    width: 47.5vw;
+    height: 47.5vw;
+    position: relative;
+    gap: 1.5vw;
+}
+.left-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.offer{
+    width: 23vw;
+    height: 23vw;
+    background-color: #f4f4f4;
+    border-radius: 24px;
+}
+.big-offer{
+    position: relative;
+    width: 47.5vw;
+    height: 47.5vw;
+    background-color: #f4f4f4;
+    border-radius: 24px;
+}
 @media (min-width:0px)  { 
     .header.mobile{
         display: flex;
@@ -43,7 +73,15 @@ body{
     .header.fullwidth{
         display: none;
     }
+    .container.fullwidth{
+        display: none;
+    }
     
+ }
+@media(min-width:535px){
+    .container.fullwidth{
+        display: flex;
+    }
  }
 @media (min-width:1290px)  { 
     .header.mobile{
