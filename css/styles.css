@@ -35,14 +35,14 @@ body{
 .links-container i{
     padding: 0 12px;
 }
-.container{
+.container-fullwidth{
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     gap: 1.5vw;
     padding: 15px 0;
 }
-.offers-container{
+.container-fullwidth .offers-container{
     width: 47.5vw;
     height: 47.5vw;
     position: relative;
@@ -52,16 +52,42 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
-.offer{
+.container-fullwidth .offer{
     width: 23vw;
     height: 23vw;
     background-color: #f4f4f4;
     border-radius: 24px;
 }
-.big-offer{
+.container-fullwidth .big-offer{
     position: relative;
     width: 47.5vw;
     height: 47.5vw;
+    background-color: #f4f4f4;
+    border-radius: 24px;
+}
+.container-mobile{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 5vw;
+    padding: 15px 0;
+}
+.container-mobile .big-offer{
+    position: relative;
+    width: 85vw;
+    height: 47.5vw;
+    background-color: #f4f4f4;
+    border-radius: 24px;
+}
+.container-mobile .offers-container{
+    width: 85vw;
+    height: 85vw;
+    position: relative;
+    gap: 5vw;
+}
+.container-mobile .offer{
+    width: 40vw;
+    height: 46vw;
     background-color: #f4f4f4;
     border-radius: 24px;
 }
@@ -73,14 +99,20 @@ body{
     .header.fullwidth{
         display: none;
     }
-    .container.fullwidth{
+    .container-fullwidth{
         display: none;
+    }
+    .container-mobile{
+        display: flex;
     }
     
  }
 @media(min-width:535px){
-    .container.fullwidth{
+    .container-fullwidth{
         display: flex;
+    }
+    .container-mobile{
+        display: none;
     }
  }
 @media (min-width:1290px)  { 
