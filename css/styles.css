@@ -39,133 +39,20 @@ body{
 }
 
 /*offers: probably easyer display with align-items:stretch*/
-/*desktop*/
-.container-fullwidth{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    gap: 1.5vw;
-    padding: 15px 0;
-}
-.container-fullwidth .offers-container{
-    width: 47.5vw;
-    height: 47.5vw;
-    position: relative;
-    gap: 1.5vw;
-}
+
 .right-container{
     display: flex;
     flex-wrap: wrap;
 }
-.container-fullwidth .offer{
-    position: relative;
-    width: 23vw;
-    height: 23vw;
-    background-color: #f4f4f4;
-    border-radius: 24px;
-
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    color: black;
-    font-weight: bold;
-    font-size: 1.3vw;
-
-}
-.container-fullwidth .big-offer{
-    position: relative;
-    width: 47.5vw;
-    height: 47.5vw;
-    background-color: #f4f4f4;
-    border-radius: 24px;
-
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    color: black;
-    font-weight: bold;
-    font-size: 2vw;
-}
 .offer-img{
     transition: 0.15s ease-in-out;
 }
-.big-offer:hover .offer-img{
-    transform: scale(1.05);
-}
-.offer:hover .offer-img{
-    transform: scale(1.05);
-}
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    opacity: 0;
-    width: 100%;
-    height: 8%;
-    transition: .25s ease;
-}
-.offer .overlay{
-    height: 14%;
-}
-.big-offer:hover .overlay {
-    height: 12%;
-    opacity: 1;
-}
-.offer:hover .overlay {
-    height: 17%;
-    opacity: 1;
-}
-.overlay-button{
-    display: inline-block;
-    border-radius: 24px;
-    background-color: black;
-    font-size: 1.1vw;
-    color: white;
-    padding: 0.4vw 1.4vw;
-    transition: 0.1s;
-}
-.overlay-button:hover{
-    opacity: 0.7;
-}
-
-/*mobile*/
-.container-mobile{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 5vw;
-    padding: 15px 0;
-}
-.container-mobile .big-offer{
-    position: relative;
-    width: 85vw;
-    height: 47.5vw;
-    background-color: #f4f4f4;
-    border-radius: 24px;
-}
-.container-mobile .offers-container{
-    width: 85vw;
-    height: 85vw;
-    position: relative;
-    gap: 5vw;
-}
-.container-mobile .offer{
-    width: 40vw;
-    height: 46vw;
-    background-color: #f4f4f4;
-    border-radius: 24px;
-}
 .big-offer .offer-img{
     max-width: 376px;
+    height: 60%;
 }
 .offer .offer-img{
     max-width: 160px;
-}
-.offer-img{
     width: 57%;
 }
 
@@ -178,22 +65,141 @@ body{
     .header.fullwidth{
         display: none;
     }
-    .container-fullwidth{
-        display: none;
-    }
-    .container-mobile{
+    .container{
         display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5vw;
+        padding: 15px 0;
     }
+    .container .big-offer{
+        position: relative;
+        width: 85vw;
+        height: 47.5vw;
+        background-color: #acacac;
+        border-radius: 24px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+        font-weight: bold;
+        font-size: 3.5vw;
+    }
+    .container .offers-container{
+        width: 85vw;
+        height: 85vw;
+        position: relative;
+        gap: 5vw;
+    }
+    .container .offer{
+        width: 40vw;
+        height: 46vw;
+        background-color: #f4f4f4;
+        border-radius: 24px;
     
- }
-@media(min-width:535px){
-    .container-fullwidth{
         display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: black;
+        font-weight: bold;
+        font-size: 3.5vw;
     }
-    .container-mobile{
+    .overlay{
         display: none;
     }
  }
+@media(min-width:600px){  
+    .container{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 1.5vw;
+        padding: 15px 0;
+    }
+    .container .offers-container{
+        width: 47.5vw;
+        height: 47.5vw;
+        position: relative;
+        gap: 1.5vw;
+    }
+    .container .offer{
+        position: relative;
+        width: 23vw;
+        height: 23vw;
+        background-color: #f4f4f4;
+        border-radius: 24px;
+    
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: black;
+        font-weight: bold;
+        font-size: 1.3vw;
+    
+    }
+    .container .big-offer{
+        position: relative;
+        width: 47.5vw;
+        height: 47.5vw;
+        background-color: #f4f4f4;
+        border-radius: 24px;
+    
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: black;
+        font-weight: bold;
+        font-size: 2vw;
+    }
+    /*hover*/
+
+    .big-offer:hover .offer-img{
+        transform: scale(1.05);
+    }
+    .offer:hover .offer-img{
+        transform: scale(1.05);
+    }
+    .overlay {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        opacity: 0;
+        width: 100%;
+        height: 8%;
+        transition: .25s ease;
+    }
+    .offer .overlay{
+        height: 14%;
+    }
+    .big-offer:hover .overlay {
+        height: 12%;
+        opacity: 1;
+    }
+    .offer:hover .overlay {
+        height: 17%;
+        opacity: 1;
+    }
+    .overlay-button{
+        display: inline-block;
+        border-radius: 24px;
+        background-color: black;
+        font-size: 1.1vw;
+        color: white;
+        padding: 0.4vw 1.4vw;
+        transition: 0.1s;
+    }
+    .overlay-button:hover{
+        opacity: 0.7;
+    }
+}
 @media (min-width:1290px)  { 
     .header.mobile{
         display: none;
