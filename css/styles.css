@@ -208,3 +208,41 @@ body{
         display: flex;
     }
  }
+
+/*footer*/
+footer{
+    position: relative;
+    height: 25vw;
+    display: flex;
+    flex-direction: row;
+    border-color: #dddddd;
+    border-style: solid;
+    border-width: 1px 0;
+    justify-content: space-between;
+    padding: 0 1vw;
+}
+.footer-section h1{
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+.section-title{
+    margin: 1vw 0;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    font-size: 0.7vw;
+}
+.buttons h2{
+    margin: 0.35vw;
+    color: #020202;
+}
+.buttons h2:hover{
+    color: #162ca0;
+    text-decoration: underline;
+}
+#firsts-buttons{
+    display: flex;
+    flex-direction: row;
+}
